@@ -1,0 +1,40 @@
+{
+  "name": "ipinfo-cli",
+  "version": "1.0.0",
+  "description": "Get current ip information",
+  "main": "cli.js",
+  "scripts": {
+    "test": "xo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/beatfreaker/ipinfo-cli.git"
+  },
+  "keywords": [
+    "ipinfo",
+    "ip",
+    "information",
+    "cli",
+    "command",
+    "utility",
+    "address"
+  ],
+  "author": {
+    "name": "Chintan Radia",
+    "email": "radiachints1512@gmail.com",
+    "url": "http://beatfreaker.github.io/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/beatfreaker/ipinfo-cli/issues"
+  },
+  "homepage": "https://github.com/beatfreaker/ipinfo-cli",
+  "dependencies": {
+    "chalk": "^1.1.1",
+    "cli-table": "^0.3.1",
+    "ipinfo": "^1.0.0"
+  },
+  "devDependencies": {
+    "xo": "^0.7.1"
+  }
+}
