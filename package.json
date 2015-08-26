@@ -10,6 +10,9 @@
     "type": "git",
     "url": "https://github.com/beatfreaker/ipinfo-cli.git"
   },
+  "bin": {
+    "ipinfo": "cli.js"
+  },
   "keywords": [
     "ipinfo",
     "ip",
@@ -32,7 +35,8 @@
   "dependencies": {
     "chalk": "^1.1.1",
     "cli-table": "^0.3.1",
-    "ipinfo": "^1.0.0"
+    "ipinfo": "^1.0.0",
+    "meow": "^3.3.0"
   },
   "devDependencies": {
     "xo": "^0.7.1"
