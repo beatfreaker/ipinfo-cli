@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 'use strict';
 
-var ipInfo = require('ipinfo');
-var chalk = require('chalk');
-var Table = require('cli-table');
-var meow = require('meow');
-var tbl = new Table({
+const ipInfo = require('ipinfo');
+const chalk = require('chalk');
+const Table = require('cli-table');
+const meow = require('meow');
+const tbl = new Table({
 	head: [chalk.magenta.bold('Title'), chalk.magenta.bold('Value')]
 });
 
-var cli = meow({
+const cli = meow({
 	help: [
 		'Usage',
 		'   - If an IP address is passed, information about it is',
@@ -47,24 +47,27 @@ var cli = meow({
 	]
 });
 
-var ignoredKeys = ['readme'];
+const ignoredKeys = ['readme'];
 
-ipInfo(cli.input[0], function (err, ipResults) {
+ipInfo(cli.input[0], (err, ipResults) => {
 	if (err) {
 		console.error(err);
 		process.exit(1);
 	}
+
 	if (ipResults.error) {
 		console.error(ipResults.error);
 		process.exit(1);
 	}
-	for (var key in ipResults) {
-		if (ipResults.hasOwnProperty(key)) {
-			if (ignoredKeys.indexOf(key) === -1) {
-				var value = ipResults[key];
+
+	for (const key in ipResults) {
+		if (Object.prototype.hasOwnProperty.call(ipResults, key)) {
+			if (!ignoredKeys.includes(key)) {
+				const value = ipResults[key];
 				tbl.push([chalk.cyan(key), chalk.green(value)]);
 			}
 		}
 	}
+
 	console.log(tbl.toString());
 });
