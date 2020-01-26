@@ -1,14 +1,14 @@
 {
   "name": "ipinfo-cli",
-  "version": "1.0.0",
-  "description": "Get current ip information",
+  "version": "2.0.0",
+  "description": "Get ip information using command line",
   "main": "cli.js",
   "scripts": {
     "test": "xo"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/beatfreaker/ipinfo-cli.git"
+    "url": "git+https://github.com/beatfreaker/ipinfo-cli.git"
   },
   "bin": {
     "ipinfo": "cli.js"
@@ -27,18 +27,25 @@
     "email": "radiachints1512@gmail.com",
     "url": "http://beatfreaker.github.io/"
   },
+  "contributors": [
+    {
+      "name": "David Refoua",
+      "email": "David@Refoua.me",
+      "url": "https://www.refoua.me/"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/beatfreaker/ipinfo-cli/issues"
   },
-  "homepage": "https://github.com/beatfreaker/ipinfo-cli",
+  "homepage": "https://github.com/beatfreaker/ipinfo-cli#readme",
   "dependencies": {
-    "chalk": "^1.1.1",
+    "chalk": "^3.0.0",
     "cli-table": "^0.3.1",
-    "ipinfo": "^1.0.0",
-    "meow": "^3.3.0"
+    "ipinfo": "^1.3.9",
+    "meow": "^3.0.0"
   },
   "devDependencies": {
-    "xo": "^0.7.1"
+    "xo": "^0.25.3"
   }
 }

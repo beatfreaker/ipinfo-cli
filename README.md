@@ -1,6 +1,6 @@
 # ipinfo-cli
 
-> Get current(system) ip information
+Get information about an IP address using command line with the help of [ipinfo.io](https://ipinfo.io)'s API.
 
 ## installation
 ```
@@ -11,8 +11,18 @@
 ```
 > ipinfo-cli --help
 
-	Example
+	Usage
+		- If an IP address is passed, information about it is
+		  fetched and displayed.
+		- Otherwise, the current public address will be used.
+
+	Examples
+
 		> ipinfo
+		> ipinfo 8.8.8.8
+
+	Result
+
 		┌──────────┬──────────────────────────────────────────┐
 		│ Title    │ Value                                    │
 		├──────────┼──────────────────────────────────────────┤
@@ -31,6 +41,8 @@
 		│ org      │ XYZ Inc.                                 │
 		├──────────┼──────────────────────────────────────────┤
 		│ postal   │ 99999                                    │
+		├──────────┼──────────────────────────────────────────┤
+		│ timezone │ America/Los_Angeles                      │
 		└──────────┴──────────────────────────────────────────┘
 ```
 
